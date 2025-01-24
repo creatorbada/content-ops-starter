@@ -4,7 +4,7 @@ slug: /
 sections:
   - type: GenericSection
     title:
-      text: Scaling Projects Using Virality
+      text: Scaling Projects With Virality
       color: text-dark
       type: TitleBlock
     subtitle: Subtitle goes her
