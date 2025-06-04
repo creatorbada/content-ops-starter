@@ -20,7 +20,7 @@ sections:
         elementId: ''
         type: Button
     media:
-      url: /images/Equalizer.gif
+      url: /images/Union.gif
       altText: Unblock your team boost your time to production preview
       elementId: ''
       type: ImageBlock
