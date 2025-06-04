@@ -151,7 +151,7 @@ sections:
         style: primary
         type: Link
     media:
-      url: '/images/Line Graph {gif}.jpg'
+      url: /images/Eye Animation.gif
       altText: Dope design preview
       type: ImageBlock
     badge:
