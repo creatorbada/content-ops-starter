@@ -7,7 +7,7 @@ sections:
       text: Scaling Projects Using Viral Content
       color: text-dark
       type: TitleBlock
-    subtitle: Subtitle goes her
+    subtitle: ''
     text: ''
     actions:
       - label: Get started
