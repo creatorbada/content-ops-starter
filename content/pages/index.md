@@ -70,7 +70,7 @@ sections:
           type: ImageBlock
           altText: Lightning bolt symbol on red background
           elementId: ''
-          url: /images/Puzzle Animation.gif
+          url: /images/Equalizer.gif
           styles:
             self:
               borderRadius: x-large
