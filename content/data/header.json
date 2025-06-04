@@ -34,7 +34,7 @@
             "altText": "Dropdown",
             "links": [
                 {
-                    "label": "SRT",
+                    "label": "Batch SRT Conversor",
                     "url": "/",
                     "icon": "arrowRight",
                     "iconPosition": "right",
