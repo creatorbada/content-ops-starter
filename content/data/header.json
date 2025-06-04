@@ -42,7 +42,7 @@
                     "type": "Link"
                 },
                 {
-                    "label": "Dropdown item",
+                    "label": "YouTube Downloader",
                     "url": "/",
                     "icon": "arrowRight",
                     "iconPosition": "right",
