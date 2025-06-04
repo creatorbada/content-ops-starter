@@ -116,7 +116,7 @@ sections:
         style: primary
         type: Link
     media:
-      url: /images/hero2.svg
+      url: /images/Stairs.gif
       altText: Fun feature preview
       type: ImageBlock
     badge:
