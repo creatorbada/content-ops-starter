@@ -104,6 +104,6 @@
         }
     ],
     "copyrightText": "Founder, bada\n",
-    "colors": "bg-dark-fg-light",
+    "colors": "bg-light-fg-dark",
     "type": "Footer"
 }
