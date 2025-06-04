@@ -34,7 +34,7 @@
             "altText": "Dropdown",
             "links": [
                 {
-                    "label": "Dropdown item",
+                    "label": "SRT",
                     "url": "/",
                     "icon": "arrowRight",
                     "iconPosition": "right",
