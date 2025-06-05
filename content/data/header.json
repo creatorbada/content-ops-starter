@@ -35,7 +35,7 @@
             "links": [
                 {
                     "label": "Batch SRT Conversor",
-                    "url": "/",
+                    "url": "/srt",
                     "icon": "arrowRight",
                     "iconPosition": "right",
                     "style": "secondary",
