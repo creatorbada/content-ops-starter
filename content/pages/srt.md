@@ -18,12 +18,6 @@ sections:
         subtitle: This is the item subtitle
         text: |
           Follow the tutorial to build your first Netlify Create site.
-        image:
-          type: ImageBlock
-          altText: Placeholder text
-          styles:
-            self:
-              borderRadius: x-large
         actions: []
         colors: bg-light-fg-dark
         styles:
