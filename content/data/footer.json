@@ -1,6 +1,6 @@
 {
     "logo": {
-        "url": "/images/logo-white.svg",
+        "url": "/images/de.png",
         "altText": "Logo light",
         "type": "ImageBlock"
     },
@@ -83,6 +83,13 @@
             "url": "/",
             "icon": "mail",
             "type": "Social"
+        },
+        {
+            "type": "Social",
+            "altText": "Instagram link",
+            "url": "/",
+            "icon": "instagram",
+            "elementId": ""
         }
     ],
     "legalLinks": [
