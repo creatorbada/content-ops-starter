@@ -12,7 +12,7 @@ sections:
     actions:
       - label: Get started
         altText: ''
-        url: 'http://localhost:3002'
+        url: 'https://form.typeform.com/to/r9Asj4cg'
         showIcon: false
         icon: arrowRight
         iconPosition: right
