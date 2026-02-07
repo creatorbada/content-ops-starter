@@ -180,7 +180,7 @@ sections:
       text: Start Getting Millions of High Quality Views Per Month
       color: text-dark
       type: TitleBlock
-    subtitle: Section with a form subtitl
+    subtitle: ''
     text: ''
     media:
       fields:
