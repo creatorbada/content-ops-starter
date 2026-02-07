@@ -49,9 +49,7 @@ sections:
       text: Stop Doing The Same Thing And Expecting A Different Outcome
       color: text-dark
       type: TitleBlock
-    subtitle: >-
-      Partner with experts that are in the trenches every day making viral
-      content.
+    subtitle: Partner with experts that are in the trenches going viral everyday
     text: >
       A service that helps businesses to manage their social media accounts and
       posts.
