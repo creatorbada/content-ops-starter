@@ -21,7 +21,7 @@ sections:
         type: Button
     media:
       url: /images/Union.gif
-      altText: Unblock your team boost your time to production preview
+      altText: ''
       elementId: ''
       type: ImageBlock
     elementId: ''
