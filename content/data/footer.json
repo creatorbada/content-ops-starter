@@ -3,7 +3,7 @@
         "altText": "Logo light",
         "type": "ImageBlock"
     },
-    "text": "Viral Scale Technologies LTDA\n",
+    "text": "Viral Scale Technologies LTDA\n\ncontact\\@viralgroup.co\n\n",
     "secondaryLinks": {
         "title": "Company",
         "links": [
@@ -28,7 +28,30 @@
             "elementId": ""
         }
     ],
-    "legalLinks": [],
+    "legalLinks": [
+        {
+            "type": "Link",
+            "label": "PRIVACY POLICY",
+            "altText": "",
+            "url": "/privacy",
+            "showIcon": false,
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "elementId": ""
+        },
+        {
+            "type": "Link",
+            "label": "TERMS OF SERVICE",
+            "altText": "",
+            "url": "/terms",
+            "showIcon": false,
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "elementId": ""
+        }
+    ],
     "copyrightText": "",
     "colors": "bg-light-fg-dark",
     "type": "Footer",

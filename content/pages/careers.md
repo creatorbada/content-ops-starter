@@ -81,6 +81,28 @@ sections:
       subtitle:
         textAlign: center
     type: FeaturedItemsSection
+  - type: DividerSection
+    title: Divider
+    elementId: ''
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-20
+          - pl-20
+          - pb-20
+          - pr-20
+  - type: DividerSection
+    title: Divider
+    elementId: ''
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-12
+          - pl-12
+          - pb-12
+          - pr-12
 seo:
   metaTitle: Careers - Demo site
   metaDescription: This is the careers page built with Netlify Create.
