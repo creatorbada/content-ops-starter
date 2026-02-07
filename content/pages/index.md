@@ -20,7 +20,7 @@ sections:
         elementId: ''
         type: Button
     media:
-      url: /images/0206(1).gif
+      url: /images/Union.gif
       altText: ''
       elementId: ''
       type: ImageBlock
