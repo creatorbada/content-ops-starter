@@ -85,7 +85,9 @@ sections:
         self:
           textAlign: center
       type: TitleBlock
-    subtitle: We can generate MILLIONS of high quality views every month for your brand
+    subtitle: >-
+      We know how to generate MILLIONS of high quality views every month for
+      your brand
     text: |-
       Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.
       Aenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet
