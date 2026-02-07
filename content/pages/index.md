@@ -50,7 +50,7 @@ sections:
       color: text-dark
       type: TitleBlock
     subtitle: >-
-      Partner with people that are in the trenches every day making viral
+      Partner with experts that are in the trenches every day making viral
       content.
     text: >
       A service that helps businesses to manage their social media accounts and
