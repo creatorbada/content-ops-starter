@@ -30,6 +30,7 @@ import { SelectFormControl } from './SelectFormControl';
 import { Social } from './Social';
 import { SubNav } from './SubNav';
 import { SubmitButtonFormControl } from './SubmitButtonFormControl';
+import { TelFormControl } from './TelFormControl';
 import { TextFormControl } from './TextFormControl';
 import { TextareaFormControl } from './TextareaFormControl';
 import { ThemeStyle } from './ThemeStyle';
@@ -76,6 +77,7 @@ export const allModels = {
     Social,
     SubNav,
     SubmitButtonFormControl,
+    TelFormControl,
     TextFormControl,
     TextareaFormControl,
     ThemeStyle,

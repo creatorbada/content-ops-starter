@@ -7,18 +7,42 @@ import SubmitButtonFormControl from './SubmitButtonFormControl';
 
 export default function FormBlock(props) {
     const formRef = React.createRef<HTMLFormElement>();
+    const [isSubmitting, setIsSubmitting] = React.useState(false);
+    const [submitMessage, setSubmitMessage] = React.useState('');
     const { fields = [], elementId, submitButton, className, styles = {}, 'data-sb-field-path': fieldPath } = props;
 
     if (fields.length === 0) {
         return null;
     }
 
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
         event.preventDefault();
+        setIsSubmitting(true);
+        setSubmitMessage('');
 
         const data = new FormData(formRef.current);
         const value = Object.fromEntries(data.entries());
-        alert(`Form data: ${JSON.stringify(value)}`);
+
+        try {
+            // Netlify Forms integration
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(value as any).toString()
+            });
+
+            if (response.ok) {
+                setSubmitMessage('✅ Form submitted successfully! We will contact you soon.');
+                formRef.current.reset();
+            } else {
+                setSubmitMessage('❌ Error submitting form. Please try again.');
+            }
+        } catch (error) {
+            setSubmitMessage('❌ Error submitting form. Please try again.');
+            console.error('Form submission error:', error);
+        } finally {
+            setIsSubmitting(false);
+        }
     }
 
     return (
@@ -43,13 +67,17 @@ export default function FormBlock(props) {
             id={elementId}
             onSubmit={handleSubmit}
             ref={formRef}
-            data-sb-field-path= {fieldPath}
+            data-sb-field-path={fieldPath}
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
         >
+            <input type="hidden" name="form-name" value={elementId} />
+            <input type="hidden" name="bot-field" />
+            
             <div
                 className={classNames('w-full', 'flex', 'flex-wrap', 'gap-8', mapStyles({ justifyContent: styles?.self?.justifyContent ?? 'flex-start' }))}
                 {...(fieldPath && { 'data-sb-field-path': '.fields' })}
             >
-                <input type="hidden" name="form-name" value={elementId} />
                 {fields.map((field, index) => {
                     const modelName = field.__metadata.modelName;
                     if (!modelName) {
@@ -62,9 +90,20 @@ export default function FormBlock(props) {
                     return <FormControl key={index} {...field} {...(fieldPath && { 'data-sb-field-path': `.${index}` })} />;
                 })}
             </div>
+            
+            {submitMessage && (
+                <div className="mt-4 p-4 rounded border border-current">
+                    {submitMessage}
+                </div>
+            )}
+            
             {submitButton && (
                 <div className={classNames('mt-8', 'flex', mapStyles({ justifyContent: styles?.self?.justifyContent ?? 'flex-start' }))}>
-                    <SubmitButtonFormControl {...submitButton} {...(fieldPath && { 'data-sb-field-path': '.submitButton' })} />
+                    <SubmitButtonFormControl 
+                        {...submitButton} 
+                        {...(fieldPath && { 'data-sb-field-path': '.submitButton' })}
+                        disabled={isSubmitting}
+                    />
                 </div>
             )}
         </form>

@@ -49,6 +49,7 @@ const components = {
     PricingSection: dynamic(() => import('./sections/PricingSection')),
     RecentPostsSection: dynamic(() => import('./sections/RecentPostsSection')),
     SelectFormControl: dynamic(() => import('./blocks/FormBlock/SelectFormControl')),
+    TelFormControl: dynamic(() => import('./blocks/FormBlock/TelFormControl')),
     TextareaFormControl: dynamic(() => import('./blocks/FormBlock/TextareaFormControl')),
     TextFormControl: dynamic(() => import('./blocks/FormBlock/TextFormControl')),
     VideoBlock: dynamic(() => import('./blocks/VideoBlock')),
