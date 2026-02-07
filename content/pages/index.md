@@ -177,7 +177,7 @@ sections:
           - pr-7
     type: DividerSection
   - title:
-      text: Start Getting Millions of Views Per Month
+      text: Start Getting Millions of High Quality Views Per Month
       color: text-dark
       type: TitleBlock
     subtitle: Section with a form subtitl
