@@ -4,7 +4,7 @@ slug: /
 sections:
   - type: GenericSection
     title:
-      text: We Scale Brands With The Power Of Viral Content
+      text: We Scale Brands With The Power Of Viral Content + AI
       color: text-dark
       type: TitleBlock
     subtitle: ''
