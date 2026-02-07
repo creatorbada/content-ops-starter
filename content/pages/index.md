@@ -12,7 +12,7 @@ sections:
     actions:
       - label: Get started
         altText: ''
-        url: /
+        url: 'http://localhost:3002'
         showIcon: false
         icon: arrowRight
         iconPosition: right
