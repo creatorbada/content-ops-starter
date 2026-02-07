@@ -125,40 +125,6 @@ sections:
       self:
         alignItems: center
     type: GenericSection
-  - title:
-      text: Content Consulting That Actually Work
-      color: text-dark
-      type: TitleBlock
-    subtitle: ''
-    text: ''
-    actions:
-      - label: Get started
-        url: /
-        icon: arrowRight
-        iconPosition: right
-        style: secondary
-        type: Button
-      - label: See Tutorials
-        url: /
-        showIcon: true
-        icon: arrowRight
-        iconPosition: right
-        style: primary
-        type: Link
-    media:
-      url: /images/Eye Animation.gif
-      altText: Dope design preview
-      type: ImageBlock
-    badge:
-      label: ''
-      color: text-primary
-      type: Badge
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        alignItems: center
-        flexDirection: row-reverse
-    type: GenericSection
   - title: Divider
     colors: bg-light-fg-dark
     styles:
