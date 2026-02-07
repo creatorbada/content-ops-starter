@@ -46,7 +46,7 @@ sections:
           - pr-7
     type: DividerSection
   - title:
-      text: Social Media Management
+      text: Stop Doing The Same And Expecting A Different Outcome
       color: text-dark
       type: TitleBlock
     subtitle: Increase your reach
