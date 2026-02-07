@@ -20,7 +20,7 @@ sections:
         elementId: ''
         type: Button
     media:
-      url: /images/Equalizer.gif
+      url: /images/Puzzle Animation.gif
       altText: ''
       elementId: ''
       type: ImageBlock
