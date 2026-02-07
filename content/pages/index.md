@@ -4,7 +4,7 @@ slug: /
 sections:
   - type: GenericSection
     title:
-      text: Scaling Projects Using Viral Content
+      text: Consultoria de Viralização para Médias/Grandes Empresas
       color: text-dark
       type: TitleBlock
     subtitle: ''
