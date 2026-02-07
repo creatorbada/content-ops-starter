@@ -49,7 +49,9 @@ sections:
       text: Stop Doing The Same Thing And Expecting A Different Outcome
       color: text-dark
       type: TitleBlock
-    subtitle: Increase your reach
+    subtitle: >-
+      Partner with people that are in the trenches every day making viral
+      content.
     text: >
       A service that helps businesses to manage their social media accounts and
       posts.
