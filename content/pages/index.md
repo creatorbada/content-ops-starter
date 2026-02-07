@@ -46,7 +46,7 @@ sections:
           - pr-7
     type: DividerSection
   - title:
-      text: Stop Doing The Same And Expecting A Different Outcome
+      text: Stop Doing The Same Thing And Expecting A Different Outcome
       color: text-dark
       type: TitleBlock
     subtitle: Increase your reach
