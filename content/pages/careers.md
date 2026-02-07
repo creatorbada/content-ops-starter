@@ -67,7 +67,7 @@ sections:
         type: FeaturedItem
     actions:
       - label: Apply now
-        url: /
+        url: 'https://forms.gle/ibbT9W7sGhvjRr4N6'
         icon: arrowRight
         iconPosition: right
         style: primary
