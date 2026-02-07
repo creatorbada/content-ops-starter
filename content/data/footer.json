@@ -60,12 +60,6 @@
     },
     "socialLinks": [
         {
-            "altText": "GitHub link",
-            "url": "https://github.com/netlify",
-            "icon": "github",
-            "type": "Social"
-        },
-        {
             "type": "Social",
             "altText": "Instagram link",
             "url": "/",
