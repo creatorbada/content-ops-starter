@@ -79,7 +79,7 @@ sections:
         alignItems: center
     type: GenericSection
   - title:
-      text: Grow your business 10x faster
+      text: Grow your reach 10x faster
       color: text-dark
       styles:
         self:
