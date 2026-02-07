@@ -20,7 +20,7 @@ sections:
         elementId: ''
         type: Button
     media:
-      url: /images/Turn_this_video_202602062330.gif
+      url: /images/0206.gif
       altText: ''
       elementId: ''
       type: ImageBlock
