@@ -129,7 +129,7 @@ sections:
       text: Content Consulting That Actually Work
       color: text-dark
       type: TitleBlock
-    subtitle: Get the direction from people
+    subtitle: ''
     text: ''
     actions:
       - label: Get started
