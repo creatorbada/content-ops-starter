@@ -28,32 +28,37 @@
             "elementId": ""
         }
     ],
-    "legalLinks": [
-        {
-            "type": "Link",
-            "label": "PRIVACY POLICY",
-            "altText": "",
-            "url": "/privacy",
-            "showIcon": false,
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
-            "elementId": ""
-        },
-        {
-            "type": "Link",
-            "label": "TERMS OF SERVICE",
-            "altText": "",
-            "url": "/terms",
-            "showIcon": false,
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
-            "elementId": ""
-        }
-    ],
+    "legalLinks": [],
     "copyrightText": "",
     "colors": "bg-light-fg-dark",
     "type": "Footer",
-    "title": ""
+    "title": "",
+    "primaryLinks": {
+        "type": "FooterLinksGroup",
+        "title": "LEGAL",
+        "links": [
+            {
+                "type": "Link",
+                "label": "PRIVACY POLICY",
+                "altText": "",
+                "url": "/privacy",
+                "showIcon": false,
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "secondary",
+                "elementId": ""
+            },
+            {
+                "type": "Link",
+                "label": "TERMS OF SERVICE",
+                "altText": "",
+                "url": "/terms",
+                "showIcon": false,
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "secondary",
+                "elementId": ""
+            }
+        ]
+    }
 }
