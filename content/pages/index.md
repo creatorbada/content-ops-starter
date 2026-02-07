@@ -130,7 +130,7 @@ sections:
         alignItems: center
     type: GenericSection
   - title:
-      text: Content Consulting That Actually Works
+      text: Content Consulting That Actually Work
       color: text-dark
       type: TitleBlock
     subtitle: Be in good company
