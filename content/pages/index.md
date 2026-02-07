@@ -4,7 +4,7 @@ slug: /
 sections:
   - type: GenericSection
     title:
-      text: Consultoria de Viralização para Médias/Grandes Empresas
+      text: Scaling Brands With The Power Of Viral Content
       color: text-dark
       type: TitleBlock
     subtitle: ''
