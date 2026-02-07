@@ -19,11 +19,7 @@ sections:
           technology and willing to create something meaningful.
 
 
-
-
           Being Brazilian and with some experience with digital marketing helps.
-
-
 
 
           Initial Salary: $1.000 or R$5.500
