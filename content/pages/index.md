@@ -46,39 +46,6 @@ sections:
           - pr-7
     type: DividerSection
   - title:
-      text: Stop Doing The Same Thing And Expecting A Different Outcome
-      color: text-dark
-      type: TitleBlock
-    subtitle: Partner with experts that are in the trenches going viral everyday
-    text: ''
-    actions:
-      - label: Get started
-        url: /
-        icon: arrowRight
-        iconPosition: right
-        style: secondary
-        type: Button
-      - label: See Tutorials
-        url: /
-        showIcon: true
-        icon: arrowRight
-        iconPosition: right
-        style: primary
-        type: Link
-    media:
-      url: /images/Stairs.gif
-      altText: Fun feature preview
-      type: ImageBlock
-    badge:
-      label: ''
-      color: text-primary
-      type: Badge
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        alignItems: center
-    type: GenericSection
-  - title:
       text: Grow Your Reach 10x Faster
       color: text-dark
       styles:
@@ -128,6 +95,39 @@ sections:
       subtitle:
         textAlign: center
         fontWeight: 700
+    type: GenericSection
+  - title:
+      text: Stop Doing The Same Thing And Expecting A Different Outcome
+      color: text-dark
+      type: TitleBlock
+    subtitle: Partner with experts that are in the trenches going viral everyday
+    text: ''
+    actions:
+      - label: Get started
+        url: /
+        icon: arrowRight
+        iconPosition: right
+        style: secondary
+        type: Button
+      - label: See Tutorials
+        url: /
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        type: Link
+    media:
+      url: /images/Stairs.gif
+      altText: Fun feature preview
+      type: ImageBlock
+    badge:
+      label: ''
+      color: text-primary
+      type: Badge
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        alignItems: center
     type: GenericSection
   - title:
       text: Business Consulting
