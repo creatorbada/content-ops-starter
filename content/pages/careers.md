@@ -13,10 +13,20 @@ sections:
     items:
       - title: Developer
         subtitle: ''
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+        text: >
+          We are looking for a young developer to enter our team, this person
+          needs to be extremely aligned with the current cutting edge AI
+          technology and willing to create something meaningful.
+
+
+
+
+          Being Brazilian and with some experience with digital marketing helps.
+
+
+
+
+          Initial Salary: $1.000 or R$5.500
         colors: bg-neutral-fg-dark
         styles:
           self:
