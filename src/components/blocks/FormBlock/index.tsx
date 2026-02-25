@@ -4,12 +4,15 @@ import classNames from 'classnames';
 import { getComponent } from '../../components-registry';
 import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to-class-names';
 import SubmitButtonFormControl from './SubmitButtonFormControl';
+import { useLanguage } from '../../LanguageContext';
+import { getTranslation } from '../../translations';
 
 export default function FormBlock(props) {
     const formRef = React.createRef<HTMLFormElement>();
     const [isSubmitting, setIsSubmitting] = React.useState(false);
     const [submitMessage, setSubmitMessage] = React.useState('');
     const { fields = [], elementId, submitButton, className, styles = {}, 'data-sb-field-path': fieldPath } = props;
+    const { language } = useLanguage();
 
     if (fields.length === 0) {
         return null;
@@ -87,13 +90,13 @@ export default function FormBlock(props) {
                     if (!FormControl) {
                         throw new Error(`no component matching the form field model name: ${modelName}`);
                     }
-                    return <FormControl key={index} {...field} {...(fieldPath && { 'data-sb-field-path': `.${index}` })} />;
+                    return <FormControl key={index} {...field} placeholder={getTranslation(field.placeholder, language)} label={getTranslation(field.label, language)} {...(fieldPath && { 'data-sb-field-path': `.${index}` })} />;
                 })}
             </div>
             
             {submitMessage && (
                 <div className="mt-4 p-4 rounded border border-current">
-                    {submitMessage}
+                    {getTranslation(submitMessage, language)}
                 </div>
             )}
             
@@ -101,6 +104,7 @@ export default function FormBlock(props) {
                 <div className={classNames('mt-8', 'flex', mapStyles({ justifyContent: styles?.self?.justifyContent ?? 'flex-start' }))}>
                     <SubmitButtonFormControl 
                         {...submitButton} 
+                        label={isSubmitting ? getTranslation('Submitting...', language) : getTranslation(submitButton.label, language)}
                         {...(fieldPath && { 'data-sb-field-path': '.submitButton' })}
                         disabled={isSubmitting}
                     />

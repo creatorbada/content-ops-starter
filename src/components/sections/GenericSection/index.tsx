@@ -8,9 +8,12 @@ import { getDataAttrs } from '../../../utils/get-data-attrs';
 import Section from '../Section';
 import TitleBlock from '../../blocks/TitleBlock';
 import { Action, Badge } from '../../atoms';
+import { useLanguage } from '../../LanguageContext';
+import { getTranslation } from '../../translations';
 
 export default function GenericSection(props) {
     const { elementId, colors, backgroundImage, badge, title, subtitle, text, actions = [], media, styles = {}, enableAnnotations } = props;
+    const { language } = useLanguage();
     const flexDirection = styles?.self?.flexDirection ?? 'row';
     const alignItems = styles?.self?.alignItems ?? 'flex-start';
     const hasTextContent = !!(badge?.url || title?.text || subtitle || text || actions.length > 0);
@@ -60,7 +63,7 @@ export default function GenericSection(props) {
                                 })}
                                 {...(enableAnnotations && { 'data-sb-field-path': '.subtitle' })}
                             >
-                                {subtitle}
+                                {getTranslation(subtitle, language)}
                             </p>
                         )}
                         {text && (
@@ -71,7 +74,7 @@ export default function GenericSection(props) {
                                 })}
                                 {...(enableAnnotations && { 'data-sb-field-path': '.text' })}
                             >
-                                {text}
+                                {getTranslation(text, language)}
                             </Markdown>
                         )}
                         {actions.length > 0 && (
@@ -92,6 +95,7 @@ export default function GenericSection(props) {
                                     <Action
                                         key={index}
                                         {...action}
+                                        label={getTranslation(action.label, language)}
                                         className="lg:whitespace-nowrap"
                                         {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })}
                                     />
