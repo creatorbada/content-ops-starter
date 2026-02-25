@@ -5,6 +5,8 @@ import classNames from 'classnames';
 import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to-class-names';
 import { Social, Action, Link } from '../../atoms';
 import ImageBlock from '../../blocks/ImageBlock';
+import { useLanguage } from '../../LanguageContext';
+import { getTranslation } from '../../translations';
 
 export default function Footer(props) {
     const {
@@ -102,6 +104,7 @@ export default function Footer(props) {
 function FooterLinksGroup(props) {
     const { title, links = [] } = props;
     const fieldPath = props['data-sb-field-path'];
+    const { language } = useLanguage();
     if (links.length === 0) {
         return null;
     }
@@ -109,14 +112,14 @@ function FooterLinksGroup(props) {
         <div className="pb-8" data-sb-field-path={fieldPath}>
             {title && (
                 <h2 className="uppercase text-base tracking-wide" {...(fieldPath && { 'data-sb-field-path': '.title' })}>
-                    {title}
+                    {getTranslation(title, language)}
                 </h2>
             )}
             {links.length > 0 && (
                 <ul className={classNames('space-y-3', { 'mt-7': title })} {...(fieldPath && { 'data-sb-field-path': '.links' })}>
                     {links.map((link, index) => (
                         <li key={index}>
-                            <Action {...link} className="text-sm" {...(fieldPath && { 'data-sb-field-path': `.${index}` })} />
+                            <Action {...link} label={getTranslation(link.label, language)} className="text-sm" {...(fieldPath && { 'data-sb-field-path': `.${index}` })} />
                         </li>
                     ))}
                 </ul>

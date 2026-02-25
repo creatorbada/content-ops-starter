@@ -107,6 +107,10 @@ export const translations: Record<string, { pt: string; en: string }> = {
     'Privacy Policy': { pt: 'Política de Privacidade', en: 'Privacy Policy' },
     'Terms of Service': { pt: 'Termos de Serviço', en: 'Terms of Service' },
     'All rights reserved': { pt: 'Todos os direitos reservados', en: 'All rights reserved' },
+    'LEGAL': { pt: 'LEGAL', en: 'LEGAL' },
+    'Company': { pt: 'Empresa', en: 'Company' },
+    'PRIVACY POLICY': { pt: 'POLÍTICA DE PRIVACIDADE', en: 'PRIVACY POLICY' },
+    'TERMS OF SERVICE': { pt: 'TERMOS DE SERVIÇO', en: 'TERMS OF SERVICE' },
     // ==========================================
     // Blog
     // ==========================================
