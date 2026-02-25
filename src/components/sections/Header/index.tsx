@@ -9,6 +9,9 @@ import ImageBlock from '../../blocks/ImageBlock';
 import ChevronDownIcon from '../../svgs/chevron-down';
 import CloseIcon from '../../svgs/close';
 import MenuIcon from '../../svgs/menu';
+import LanguageSwitcher from '../../LanguageSwitcher';
+import { useLanguage } from '../../LanguageContext';
+import { getTranslation } from '../../translations';
 
 export default function Header(props) {
     const { colors = 'bg-light-fg-dark', styles = {}, enableAnnotations } = props;
@@ -71,6 +74,9 @@ function HeaderLogoLeftPrimaryLeft(props) {
                     <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
                 </ul>
             )}
+            <div className={classNames('hidden lg:flex lg:items-center', secondaryLinks.length === 0 ? 'ml-auto' : 'ml-4')}>
+                <LanguageSwitcher />
+            </div>
             {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenu {...props} />}
         </div>
     );
@@ -86,18 +92,18 @@ function HeaderLogoLeftPrimaryCentered(props) {
                 </div>
             )}
             {primaryLinks.length > 0 && (
-                <ul
-                    className="hidden lg:flex lg:items-center gap-x-10 absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-auto"
-                    {...(enableAnnotations && { 'data-sb-field-path': 'primaryLinks' })}
-                >
+                <ul className="hidden lg:flex lg:items-center gap-x-10 absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-auto" {...(enableAnnotations && { 'data-sb-field-path': 'primaryLinks' })}>
                     <ListOfLinks links={primaryLinks} colors={colors} enableAnnotations={enableAnnotations} />
                 </ul>
             )}
-            {secondaryLinks.length > 0 && (
-                <ul className="hidden lg:flex lg:items-center ml-auto gap-x-2.5" {...(enableAnnotations && { 'data-sb-field-path': 'secondaryLinks' })}>
-                    <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
-                </ul>
-            )}
+            <div className="hidden lg:flex lg:items-center ml-auto gap-x-2.5">
+                {secondaryLinks.length > 0 && (
+                    <ul className="flex items-center gap-x-2.5" {...(enableAnnotations && { 'data-sb-field-path': 'secondaryLinks' })}>
+                        <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
+                    </ul>
+                )}
+                <LanguageSwitcher />
+            </div>
             {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenu {...props} />}
         </div>
     );
@@ -117,14 +123,14 @@ function HeaderLogoLeftPrimaryRight(props) {
                     <ListOfLinks links={primaryLinks} colors={colors} enableAnnotations={enableAnnotations} />
                 </ul>
             )}
-            {secondaryLinks.length > 0 && (
-                <ul
-                    className={classNames('hidden', 'lg:flex', 'lg:items-center', 'gap-x-2.5', primaryLinks.length > 0 ? 'ml-10' : 'ml-auto')}
-                    {...(enableAnnotations && { 'data-sb-field-path': 'secondaryLinks' })}
-                >
-                    <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
-                </ul>
-            )}
+            <div className="hidden lg:flex lg:items-center gap-x-2.5 ml-4">
+                {secondaryLinks.length > 0 && (
+                    <ul className="flex items-center gap-x-2.5" {...(enableAnnotations && { 'data-sb-field-path': 'secondaryLinks' })}>
+                        <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
+                    </ul>
+                )}
+                <LanguageSwitcher />
+            </div>
             {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenu {...props} />}
         </div>
     );
@@ -144,11 +150,14 @@ function HeaderLogoCenteredPrimaryLeft(props) {
                     <ListOfLinks links={primaryLinks} colors={colors} enableAnnotations={enableAnnotations} />
                 </ul>
             )}
-            {secondaryLinks.length > 0 && (
-                <ul className="hidden lg:flex lg:items-center ml-auto gap-x-2.5" {...(enableAnnotations && { 'data-sb-field-path': 'secondaryLinks' })}>
-                    <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
-                </ul>
-            )}
+            <div className="hidden lg:flex lg:items-center ml-auto gap-x-2.5">
+                {secondaryLinks.length > 0 && (
+                    <ul className="flex items-center gap-x-2.5" {...(enableAnnotations && { 'data-sb-field-path': 'secondaryLinks' })}>
+                        <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
+                    </ul>
+                )}
+                <LanguageSwitcher />
+            </div>
             {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenu {...props} />}
         </div>
     );
@@ -164,18 +173,18 @@ function HeaderLogoCenteredPrimaryCentered(props) {
                         <SiteLogoLink title={title} logo={logo} enableAnnotations={enableAnnotations} />
                     </div>
                 )}
-                {secondaryLinks.length > 0 && (
-                    <ul className="hidden lg:flex lg:items-center gap-x-2.5 ml-auto" {...(enableAnnotations && { 'data-sb-field-path': 'secondaryLinks' })}>
-                        <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
-                    </ul>
-                )}
+                <div className="hidden lg:flex lg:items-center ml-auto gap-x-2.5">
+                    {secondaryLinks.length > 0 && (
+                        <ul className="flex items-center gap-x-2.5" {...(enableAnnotations && { 'data-sb-field-path': 'secondaryLinks' })}>
+                            <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
+                        </ul>
+                    )}
+                    <LanguageSwitcher />
+                </div>
                 {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenu {...props} />}
             </div>
             {primaryLinks.length > 0 && (
-                <ul
-                    className="hidden lg:flex lg:items-center lg:justify-center gap-x-10 mt-4"
-                    {...(enableAnnotations && { 'data-sb-field-path': 'primaryLinks' })}
-                >
+                <ul className="hidden lg:flex lg:items-center lg:justify-center gap-x-10 mt-4" {...(enableAnnotations && { 'data-sb-field-path': 'primaryLinks' })}>
                     <ListOfLinks links={primaryLinks} colors={colors} enableAnnotations={enableAnnotations} />
                 </ul>
             )}
@@ -204,7 +213,6 @@ function MobileMenu(props) {
             document.body.style.overflow = 'unset';
         };
         router.events.on('routeChangeStart', handleRouteChange);
-
         return () => {
             router.events.off('routeChangeStart', handleRouteChange);
         };
@@ -220,9 +228,12 @@ function MobileMenu(props) {
                 <div className="flex flex-col min-h-full">
                     <div className="flex items-center justify-between mb-10">
                         {(title || logo?.url) && <SiteLogoLink title={title} logo={logo} enableAnnotations={enableAnnotations} />}
-                        <button aria-label="Close Menu" title="Close Menu" className="p-2 -mr-1 focus:outline-none" onClick={closeMobileMenu}>
-                            <CloseIcon className="fill-current h-6 w-6" />
-                        </button>
+                        <div className="flex items-center gap-4">
+                            <LanguageSwitcher />
+                            <button aria-label="Close Menu" title="Close Menu" className="p-2 -mr-1 focus:outline-none" onClick={closeMobileMenu}>
+                                <CloseIcon className="fill-current h-6 w-6" />
+                            </button>
+                        </div>
                     </div>
                     {primaryLinks.length > 0 && (
                         <ul {...(enableAnnotations && { 'data-sb-field-path': 'primaryLinks' })}>
@@ -255,6 +266,7 @@ function SiteLogoLink({ title, logo, enableAnnotations }) {
 
 function ListOfLinks(props) {
     const { links = [], colors, enableAnnotations, inMobileMenu = false } = props;
+    const { language } = useLanguage();
 
     return (
         <>
@@ -270,6 +282,7 @@ function ListOfLinks(props) {
                         />
                     );
                 } else {
+                    const translatedLink = { ...link, label: getTranslation(link.label, language) };
                     return (
                         <li
                             key={index}
@@ -278,7 +291,7 @@ function ListOfLinks(props) {
                             })}
                         >
                             <Action
-                                {...link}
+                                {...translatedLink}
                                 className={classNames('whitespace-nowrap', inMobileMenu ? 'w-full' : 'text-sm', {
                                     'justify-start py-3': inMobileMenu && link.__metadata.modelName === 'Link'
                                 })}
@@ -297,6 +310,7 @@ function LinkWithSubnav(props) {
     const [isSubNavOpen, setIsSubNavOpen] = useState(false);
     const router = useRouter();
     const fieldPath = props['data-sb-field-path'];
+    const { language } = useLanguage();
 
     useEffect(() => {
         const handleRouteChange = () => {
@@ -304,7 +318,6 @@ function LinkWithSubnav(props) {
             document.body.style.overflow = 'unset';
         };
         router.events.on('routeChangeStart', handleRouteChange);
-
         return () => {
             router.events.off('routeChangeStart', handleRouteChange);
         };
@@ -313,32 +326,17 @@ function LinkWithSubnav(props) {
     return (
         <li
             className={classNames('relative', inMobileMenu ? 'border-t py-3' : 'py-2 group')}
-            onMouseLeave={
-                !process.env.stackbitPreview && !inMobileMenu
-                    ? () => {
-                          setIsSubNavOpen(false);
-                      }
-                    : undefined
-            }
+            onMouseLeave={!process.env.stackbitPreview && !inMobileMenu ? () => setIsSubNavOpen(false) : undefined}
             data-sb-field-path={fieldPath}
         >
             <button
                 aria-expanded={isSubNavOpen ? 'true' : 'false'}
-                onMouseOver={
-                    !process.env.stackbitPreview && !inMobileMenu
-                        ? () => {
-                              setIsSubNavOpen(true);
-                          }
-                        : undefined
-                }
+                onMouseOver={!process.env.stackbitPreview && !inMobileMenu ? () => setIsSubNavOpen(true) : undefined}
                 onClick={() => setIsSubNavOpen((prev) => !prev)}
                 className={classNames(
-                    'sb-component',
-                    'sb-component-block',
-                    'sb-component-link',
+                    'sb-component', 'sb-component-block', 'sb-component-link',
                     link.labelStyle === 'secondary' ? 'sb-component-link-secondary' : 'sb-component-link-primary',
-                    'inline-flex',
-                    'items-center',
+                    'inline-flex', 'items-center',
                     inMobileMenu ? 'w-full' : 'text-sm',
                     {
                         'group-hover:no-underline hover:no-underline': !inMobileMenu && (link.labelStyle ?? 'primary') === 'primary',
@@ -346,10 +344,8 @@ function LinkWithSubnav(props) {
                     }
                 )}
             >
-                <span {...(fieldPath && { 'data-sb-field-path': '.label' })}>{link.label}</span>
-                <ChevronDownIcon
-                    className={classNames('fill-current', 'shrink-0', 'h-4', 'w-4', isSubNavOpen && 'rotate-180', inMobileMenu ? 'ml-auto' : 'ml-1')}
-                />
+                <span {...(fieldPath && { 'data-sb-field-path': '.label' })}>{getTranslation(link.label, language)}</span>
+                <ChevronDownIcon className={classNames('fill-current', 'shrink-0', 'h-4', 'w-4', isSubNavOpen && 'rotate-180', inMobileMenu ? 'ml-auto' : 'ml-1')} />
             </button>
             {(link.links ?? []).length > 0 && (
                 <ul
@@ -368,12 +364,14 @@ function LinkWithSubnav(props) {
 }
 
 function ListOfSubNavLinks({ links = [], hasAnnotations, inMobileMenu = false }) {
+    const { language } = useLanguage();
     return (
         <>
             {links.map((link, index) => (
                 <li key={index}>
                     <Action
                         {...link}
+                        label={getTranslation(link.label, language)}
                         className={classNames(inMobileMenu ? 'w-full justify-start' : 'text-sm')}
                         {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })}
                     />

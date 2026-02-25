@@ -12,7 +12,7 @@ sections:
     actions:
       - label: Get started
         altText: ''
-        url: 'https://form.typeform.com/to/r9Asj4cg'
+        url: /
         showIcon: false
         icon: arrowRight
         iconPosition: right
@@ -92,33 +92,32 @@ sections:
         textAlign: center
         fontWeight: 700
     type: GenericSection
-  - type: GenericSection
-    title:
-      type: TitleBlock
+  - title:
       text: Stop Doing The Same Thing And Expecting A Different Outcome
       color: text-dark
-    subtitle: ''
+      type: TitleBlock
+    subtitle: Partner with experts that are in the trenches going viral everyday
     text: ''
     actions:
-      - type: Button
-        label: Get started
-        url: 'https://form.typeform.com/to/r9Asj4cg'
+      - label: Get started
+        url: /
         icon: arrowRight
         iconPosition: right
         style: secondary
+        type: Button
     media:
-      type: ImageBlock
       url: /images/Stairs.gif
-      altText: Dope design preview
+      altText: Fun feature preview
+      type: ImageBlock
     badge:
-      type: Badge
       label: ''
       color: text-primary
+      type: Badge
     colors: bg-light-fg-dark
     styles:
       self:
         alignItems: center
-        flexDirection: row-reverse
+    type: GenericSection
   - title: Divider
     colors: bg-light-fg-dark
     styles:
@@ -129,6 +128,61 @@ sections:
           - pb-7
           - pr-7
     type: DividerSection
+  - title:
+      text: Start Getting Millions of High Quality Views Per Month
+      color: text-dark
+      type: TitleBlock
+    subtitle: ''
+    text: ''
+    media:
+      fields:
+        - name: name
+          label: Name
+          hideLabel: true
+          placeholder: Your name
+          isRequired: true
+          width: full
+          type: TextFormControl
+        - name: email
+          label: Email
+          hideLabel: true
+          placeholder: Your email
+          isRequired: true
+          width: full
+          type: EmailFormControl
+        - name: phone
+          label: Phone
+          hideLabel: true
+          placeholder: Your phone number
+          isRequired: false
+          width: full
+          type: TelFormControl
+        - name: message
+          label: Explain your Situation
+          hideLabel: true
+          placeholder: Tell us about your situation
+          width: full
+          type: TextareaFormControl
+      elementId: contact-form
+      styles:
+        self:
+          padding:
+            - pt-6
+      type: FormBlock
+      submitButton:
+        type: SubmitButtonFormControl
+        label: Submit
+        showIcon: false
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        elementId: null
+    badge:
+      label: Contact Us
+      color: text-primary
+      type: Badge
+    colors: bg-light-fg-dark
+    type: GenericSection
 seo:
   metaTitle: Home - Demo site
   metaDescription: This demo site is built with Netlify Create.
