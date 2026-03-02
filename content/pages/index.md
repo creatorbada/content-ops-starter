@@ -12,7 +12,7 @@ sections:
     actions:
       - label: Get started
         altText: ''
-        url: /
+        url: 'https://form.typeform.com/to/r9Asj4cg'
         showIcon: false
         icon: arrowRight
         iconPosition: right
@@ -100,7 +100,7 @@ sections:
     text: ''
     actions:
       - label: Get started
-        url: /
+        url: 'https://form.typeform.com/to/r9Asj4cg'
         icon: arrowRight
         iconPosition: right
         style: secondary
