@@ -111,6 +111,10 @@ export const translations: Record<string, { pt: string; en: string }> = {
     'Company': { pt: 'Empresa', en: 'Company' },
     'PRIVACY POLICY': { pt: 'POLÍTICA DE PRIVACIDADE', en: 'PRIVACY POLICY' },
     'TERMS OF SERVICE': { pt: 'TERMOS DE SERVIÇO', en: 'TERMS OF SERVICE' },
+    'SUPPORT': { pt: 'SUPORTE', en: 'SUPPORT' },
+    'LONGEV PRIVACY POLICY': { pt: 'POLÍTICA DE PRIVACIDADE DO LONGEV', en: 'LONGEV PRIVACY POLICY' },
+    'LONGEV TERMS OF USE': { pt: 'TERMOS DE USO DO LONGEV', en: 'LONGEV TERMS OF USE' },
+    'LONGEV SUPPORT': { pt: 'SUPORTE DO LONGEV', en: 'LONGEV SUPPORT' },
     // ==========================================
     // Blog
     // ==========================================
